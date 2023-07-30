@@ -26,9 +26,23 @@ namespace OnlineShop
 
         private void pnl_category_Click(object sender, EventArgs e)
         {
-            //Category category = new Category();
-            //this.Hide();
-            //category.Show();
+            Category category = new Category();
+            this.Hide();
+            category.Show();
+        }
+
+        private void lbl_category1_Click(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            this.Hide();
+            category.Show();
+        }
+
+        private void lbl_category2_Click(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            this.Hide();
+            category.Show();
         }
     }
 }

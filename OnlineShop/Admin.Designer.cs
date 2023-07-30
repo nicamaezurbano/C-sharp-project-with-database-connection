@@ -35,17 +35,17 @@ namespace OnlineShop
             this.lbl_name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_category = new System.Windows.Forms.Panel();
-            this.pnl_report = new System.Windows.Forms.Panel();
-            this.pnl_order = new System.Windows.Forms.Panel();
-            this.pnl_item = new System.Windows.Forms.Panel();
-            this.lbl_category2 = new System.Windows.Forms.Label();
             this.lbl_category1 = new System.Windows.Forms.Label();
-            this.lbl_item1 = new System.Windows.Forms.Label();
-            this.lbl_item2 = new System.Windows.Forms.Label();
-            this.lbl_order1 = new System.Windows.Forms.Label();
-            this.lbl_order2 = new System.Windows.Forms.Label();
+            this.lbl_category2 = new System.Windows.Forms.Label();
+            this.pnl_report = new System.Windows.Forms.Panel();
             this.lbl_report1 = new System.Windows.Forms.Label();
             this.lbl_report2 = new System.Windows.Forms.Label();
+            this.pnl_order = new System.Windows.Forms.Panel();
+            this.lbl_order1 = new System.Windows.Forms.Label();
+            this.lbl_order2 = new System.Windows.Forms.Label();
+            this.pnl_item = new System.Windows.Forms.Panel();
+            this.lbl_item1 = new System.Windows.Forms.Label();
+            this.lbl_item2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_category.SuspendLayout();
@@ -123,35 +123,18 @@ namespace OnlineShop
             this.pnl_category.TabIndex = 9;
             this.pnl_category.Click += new System.EventHandler(this.pnl_category_Click);
             // 
-            // pnl_report
+            // lbl_category1
             // 
-            this.pnl_report.BackColor = System.Drawing.Color.PeachPuff;
-            this.pnl_report.Controls.Add(this.lbl_report1);
-            this.pnl_report.Controls.Add(this.lbl_report2);
-            this.pnl_report.Location = new System.Drawing.Point(405, 281);
-            this.pnl_report.Name = "pnl_report";
-            this.pnl_report.Size = new System.Drawing.Size(300, 154);
-            this.pnl_report.TabIndex = 10;
-            // 
-            // pnl_order
-            // 
-            this.pnl_order.BackColor = System.Drawing.Color.PeachPuff;
-            this.pnl_order.Controls.Add(this.lbl_order1);
-            this.pnl_order.Controls.Add(this.lbl_order2);
-            this.pnl_order.Location = new System.Drawing.Point(95, 281);
-            this.pnl_order.Name = "pnl_order";
-            this.pnl_order.Size = new System.Drawing.Size(300, 154);
-            this.pnl_order.TabIndex = 10;
-            // 
-            // pnl_item
-            // 
-            this.pnl_item.BackColor = System.Drawing.Color.PeachPuff;
-            this.pnl_item.Controls.Add(this.lbl_item1);
-            this.pnl_item.Controls.Add(this.lbl_item2);
-            this.pnl_item.Location = new System.Drawing.Point(405, 118);
-            this.pnl_item.Name = "pnl_item";
-            this.pnl_item.Size = new System.Drawing.Size(300, 154);
-            this.pnl_item.TabIndex = 10;
+            this.lbl_category1.AutoSize = true;
+            this.lbl_category1.BackColor = System.Drawing.Color.PeachPuff;
+            this.lbl_category1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_category1.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_category1.Location = new System.Drawing.Point(104, 45);
+            this.lbl_category1.Name = "lbl_category1";
+            this.lbl_category1.Size = new System.Drawing.Size(78, 21);
+            this.lbl_category1.TabIndex = 10;
+            this.lbl_category1.Text = "Manage";
+            this.lbl_category1.Click += new System.EventHandler(this.lbl_category1_Click);
             // 
             // lbl_category2
             // 
@@ -164,42 +147,51 @@ namespace OnlineShop
             this.lbl_category2.Size = new System.Drawing.Size(163, 38);
             this.lbl_category2.TabIndex = 9;
             this.lbl_category2.Text = "Category";
+            this.lbl_category2.Click += new System.EventHandler(this.lbl_category2_Click);
             // 
-            // lbl_category1
+            // pnl_report
             // 
-            this.lbl_category1.AutoSize = true;
-            this.lbl_category1.BackColor = System.Drawing.Color.PeachPuff;
-            this.lbl_category1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_category1.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_category1.Location = new System.Drawing.Point(104, 45);
-            this.lbl_category1.Name = "lbl_category1";
-            this.lbl_category1.Size = new System.Drawing.Size(78, 21);
-            this.lbl_category1.TabIndex = 10;
-            this.lbl_category1.Text = "Manage";
+            this.pnl_report.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnl_report.Controls.Add(this.lbl_report1);
+            this.pnl_report.Controls.Add(this.lbl_report2);
+            this.pnl_report.Location = new System.Drawing.Point(405, 281);
+            this.pnl_report.Name = "pnl_report";
+            this.pnl_report.Size = new System.Drawing.Size(300, 154);
+            this.pnl_report.TabIndex = 10;
             // 
-            // lbl_item1
+            // lbl_report1
             // 
-            this.lbl_item1.AutoSize = true;
-            this.lbl_item1.BackColor = System.Drawing.Color.PeachPuff;
-            this.lbl_item1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_item1.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_item1.Location = new System.Drawing.Point(107, 48);
-            this.lbl_item1.Name = "lbl_item1";
-            this.lbl_item1.Size = new System.Drawing.Size(78, 21);
-            this.lbl_item1.TabIndex = 12;
-            this.lbl_item1.Text = "Manage";
+            this.lbl_report1.AutoSize = true;
+            this.lbl_report1.BackColor = System.Drawing.Color.PeachPuff;
+            this.lbl_report1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_report1.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_report1.Location = new System.Drawing.Point(125, 48);
+            this.lbl_report1.Name = "lbl_report1";
+            this.lbl_report1.Size = new System.Drawing.Size(48, 21);
+            this.lbl_report1.TabIndex = 12;
+            this.lbl_report1.Text = "View";
             // 
-            // lbl_item2
+            // lbl_report2
             // 
-            this.lbl_item2.AutoSize = true;
-            this.lbl_item2.BackColor = System.Drawing.Color.PeachPuff;
-            this.lbl_item2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_item2.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_item2.Location = new System.Drawing.Point(102, 68);
-            this.lbl_item2.Name = "lbl_item2";
-            this.lbl_item2.Size = new System.Drawing.Size(86, 38);
-            this.lbl_item2.TabIndex = 11;
-            this.lbl_item2.Text = "Item";
+            this.lbl_report2.AutoSize = true;
+            this.lbl_report2.BackColor = System.Drawing.Color.PeachPuff;
+            this.lbl_report2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_report2.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_report2.Location = new System.Drawing.Point(92, 68);
+            this.lbl_report2.Name = "lbl_report2";
+            this.lbl_report2.Size = new System.Drawing.Size(117, 38);
+            this.lbl_report2.TabIndex = 11;
+            this.lbl_report2.Text = "Report";
+            // 
+            // pnl_order
+            // 
+            this.pnl_order.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnl_order.Controls.Add(this.lbl_order1);
+            this.pnl_order.Controls.Add(this.lbl_order2);
+            this.pnl_order.Location = new System.Drawing.Point(95, 281);
+            this.pnl_order.Name = "pnl_order";
+            this.pnl_order.Size = new System.Drawing.Size(300, 154);
+            this.pnl_order.TabIndex = 10;
             // 
             // lbl_order1
             // 
@@ -225,29 +217,39 @@ namespace OnlineShop
             this.lbl_order2.TabIndex = 11;
             this.lbl_order2.Text = "Order";
             // 
-            // lbl_report1
+            // pnl_item
             // 
-            this.lbl_report1.AutoSize = true;
-            this.lbl_report1.BackColor = System.Drawing.Color.PeachPuff;
-            this.lbl_report1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_report1.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_report1.Location = new System.Drawing.Point(125, 48);
-            this.lbl_report1.Name = "lbl_report1";
-            this.lbl_report1.Size = new System.Drawing.Size(48, 21);
-            this.lbl_report1.TabIndex = 12;
-            this.lbl_report1.Text = "View";
+            this.pnl_item.BackColor = System.Drawing.Color.PeachPuff;
+            this.pnl_item.Controls.Add(this.lbl_item1);
+            this.pnl_item.Controls.Add(this.lbl_item2);
+            this.pnl_item.Location = new System.Drawing.Point(405, 118);
+            this.pnl_item.Name = "pnl_item";
+            this.pnl_item.Size = new System.Drawing.Size(300, 154);
+            this.pnl_item.TabIndex = 10;
             // 
-            // lbl_report2
+            // lbl_item1
             // 
-            this.lbl_report2.AutoSize = true;
-            this.lbl_report2.BackColor = System.Drawing.Color.PeachPuff;
-            this.lbl_report2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_report2.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbl_report2.Location = new System.Drawing.Point(92, 68);
-            this.lbl_report2.Name = "lbl_report2";
-            this.lbl_report2.Size = new System.Drawing.Size(117, 38);
-            this.lbl_report2.TabIndex = 11;
-            this.lbl_report2.Text = "Report";
+            this.lbl_item1.AutoSize = true;
+            this.lbl_item1.BackColor = System.Drawing.Color.PeachPuff;
+            this.lbl_item1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_item1.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_item1.Location = new System.Drawing.Point(107, 48);
+            this.lbl_item1.Name = "lbl_item1";
+            this.lbl_item1.Size = new System.Drawing.Size(78, 21);
+            this.lbl_item1.TabIndex = 12;
+            this.lbl_item1.Text = "Manage";
+            // 
+            // lbl_item2
+            // 
+            this.lbl_item2.AutoSize = true;
+            this.lbl_item2.BackColor = System.Drawing.Color.PeachPuff;
+            this.lbl_item2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_item2.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbl_item2.Location = new System.Drawing.Point(102, 68);
+            this.lbl_item2.Name = "lbl_item2";
+            this.lbl_item2.Size = new System.Drawing.Size(86, 38);
+            this.lbl_item2.TabIndex = 11;
+            this.lbl_item2.Text = "Item";
             // 
             // Admin
             // 
