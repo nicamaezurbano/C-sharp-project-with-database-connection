@@ -39,7 +39,7 @@ namespace OnlineShop
                 //Getting the user record from the onlineshop database.
                 string con = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
                 MySqlConnection conn = new MySqlConnection(con);
-                string selectQuery = "SELECT UserID, Username, Password FROM User WHERE Username = '" + email + "'";
+                string selectQuery = "SELECT ID, Email, Password, FirstName FROM User WHERE Email = '" + email + "'";
                 MySqlDataAdapter da = new MySqlDataAdapter(selectQuery, conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "User");
@@ -48,14 +48,15 @@ namespace OnlineShop
                 int row = ds.Tables["User"].Rows.Count;
                 if (row <= 0)
                 {
-                    MessageBox.Show("Incorrect username. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Incorrect email. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     //Getting the userID, username, and password.
                     retrieved_userID = int.Parse(ds.Tables["User"].Rows[0][0].ToString());
-                    string retrieved_username = ds.Tables["User"].Rows[0][1].ToString();
+                    string retrieved_email = ds.Tables["User"].Rows[0][1].ToString();
                     string retrieved_password = ds.Tables["User"].Rows[0][2].ToString();
+                    string fname = ds.Tables["User"].Rows[0][3].ToString();
 
                     //If the password doesn't match, displays a message.
                     if (retrieved_password != pass)
@@ -64,13 +65,13 @@ namespace OnlineShop
                     }
                     else
                     {
-                        //If the userID is 0, displays the form for admin/owner.
-                        if (retrieved_userID == 0)
+                        //If the userID is 1, displays the form for admin/owner.
+                        if (retrieved_userID == 1)
                         {
-                            /*Form9 form9 = new Form9();
+                            Admin admin = new Admin();
                             this.Hide();
-                            form9.Show();*/
-                            MessageBox.Show("Success.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            admin.Show();
+                            admin.lbl_name.Text = fname;
                         }
                         //Displays the form for customer.
                         else
@@ -94,6 +95,13 @@ namespace OnlineShop
         private void ck_showPass_CheckedChanged(object sender, EventArgs e)
         {
             txtBox_pass.PasswordChar = ck_showPass.Checked ? '\0' : '*';
+        }
+
+        private void link_register_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
         }
     }
 }
