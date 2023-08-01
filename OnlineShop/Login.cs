@@ -20,13 +20,12 @@ namespace OnlineShop
         }
 
         // Stores the UserID of the user.
-        // public static int retrieved_userID;
+        public static int retrieved_userID;
 
         private void btn_login_Click(object sender, EventArgs e)
         {
             string email = txtBox_email.Text;
             string pass = txtBox_pass.Text;
-            int retrieved_userID;
 
             //If there is no email and password, displays a message.
             if (email == "" || pass == "")
@@ -39,7 +38,7 @@ namespace OnlineShop
                 //Getting the user record from the onlineshop database.
                 string con = ConfigurationManager.ConnectionStrings["myConStr"].ConnectionString;
                 MySqlConnection conn = new MySqlConnection(con);
-                string selectQuery = "SELECT ID, Email, Password, FirstName FROM User WHERE Email = '" + email + "'";
+                string selectQuery = "SELECT Id, Email, Password, FirstName FROM User WHERE Email = '" + email + "'";
                 MySqlDataAdapter da = new MySqlDataAdapter(selectQuery, conn);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "User");
@@ -76,10 +75,10 @@ namespace OnlineShop
                         //Displays the form for customer.
                         else
                         {
-                            /*Form5 form5 = new Form5();
-                            form5.Show();
+                            Customer customer = new Customer();
+                            customer.Show();
                             this.Hide();
-                            form5.tb_customername.Text = tb_username.Text;*/
+                            customer.lbl_name.Text = fname;
                         }
                     }
                 }

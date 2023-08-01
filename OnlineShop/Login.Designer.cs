@@ -31,7 +31,6 @@ namespace OnlineShop
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ck_showPass = new System.Windows.Forms.CheckBox();
@@ -41,8 +40,9 @@ namespace OnlineShop
             this.txtBox_email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,15 +64,6 @@ namespace OnlineShop
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 90);
             this.panel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::OnlineShop.Properties.Resources.shopping_cart_2;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 107);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -143,7 +134,7 @@ namespace OnlineShop
             this.txtBox_pass.Name = "txtBox_pass";
             this.txtBox_pass.Size = new System.Drawing.Size(266, 26);
             this.txtBox_pass.TabIndex = 3;
-            this.txtBox_pass.Text = "admin123";
+            this.txtBox_pass.Text = "juan123";
             this.txtBox_pass.TextChanged += new System.EventHandler(this.txtBox_pass_TextChanged);
             // 
             // txtBox_email
@@ -154,7 +145,7 @@ namespace OnlineShop
             this.txtBox_email.Name = "txtBox_email";
             this.txtBox_email.Size = new System.Drawing.Size(266, 26);
             this.txtBox_email.TabIndex = 2;
-            this.txtBox_email.Text = "admin@gmail.com";
+            this.txtBox_email.Text = "juan@gmail.com";
             // 
             // label3
             // 
@@ -176,6 +167,15 @@ namespace OnlineShop
             this.label2.TabIndex = 0;
             this.label2.Text = "Email";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OnlineShop.Properties.Resources.shopping_cart_2;
+            this.pictureBox1.Location = new System.Drawing.Point(355, 107);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,9 +191,9 @@ namespace OnlineShop
             this.Controls.Add(this.panel3);
             this.Name = "Login";
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
