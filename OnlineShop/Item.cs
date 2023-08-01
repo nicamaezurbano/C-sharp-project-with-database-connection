@@ -69,7 +69,7 @@ namespace OnlineShop
             //Loads Item table on the grid view.
             LoadGridView();
 
-            //Loads Category
+            //Loads all Category in the combo box
             MySqlConnection conn = new MySqlConnection(con);
             string cmd = "SELECT Name FROM Category ORDER BY Id";
             MySqlDataAdapter da = new MySqlDataAdapter(cmd, conn);

@@ -65,5 +65,12 @@ namespace OnlineShop
             this.Hide();
             item.Show();
         }
+
+        private void pnl_order_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            this.Hide();
+            order.Show();
+        }
     }
 }

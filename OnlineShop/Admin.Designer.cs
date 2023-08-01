@@ -192,6 +192,7 @@ namespace OnlineShop
             this.pnl_order.Name = "pnl_order";
             this.pnl_order.Size = new System.Drawing.Size(300, 154);
             this.pnl_order.TabIndex = 10;
+            this.pnl_order.Click += new System.EventHandler(this.pnl_order_Click);
             // 
             // lbl_order1
             // 
