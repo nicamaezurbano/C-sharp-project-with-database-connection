@@ -44,5 +44,26 @@ namespace OnlineShop
             this.Hide();
             category.Show();
         }
+
+        private void pnl_item_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            this.Hide();
+            item.Show();
+        }
+
+        private void lbl_item1_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            this.Hide();
+            item.Show();
+        }
+
+        private void lbl_item2_Click(object sender, EventArgs e)
+        {
+            Item item = new Item();
+            this.Hide();
+            item.Show();
+        }
     }
 }

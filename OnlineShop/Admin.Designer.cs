@@ -226,6 +226,7 @@ namespace OnlineShop
             this.pnl_item.Name = "pnl_item";
             this.pnl_item.Size = new System.Drawing.Size(300, 154);
             this.pnl_item.TabIndex = 10;
+            this.pnl_item.Click += new System.EventHandler(this.pnl_item_Click);
             // 
             // lbl_item1
             // 
@@ -238,6 +239,7 @@ namespace OnlineShop
             this.lbl_item1.Size = new System.Drawing.Size(78, 21);
             this.lbl_item1.TabIndex = 12;
             this.lbl_item1.Text = "Manage";
+            this.lbl_item1.Click += new System.EventHandler(this.lbl_item1_Click);
             // 
             // lbl_item2
             // 
@@ -250,6 +252,7 @@ namespace OnlineShop
             this.lbl_item2.Size = new System.Drawing.Size(86, 38);
             this.lbl_item2.TabIndex = 11;
             this.lbl_item2.Text = "Item";
+            this.lbl_item2.Click += new System.EventHandler(this.lbl_item2_Click);
             // 
             // Admin
             // 

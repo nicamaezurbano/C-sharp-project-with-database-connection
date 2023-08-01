@@ -64,7 +64,7 @@ namespace OnlineShop
 
         private void Category_Load(object sender, EventArgs e)
         {
-            //Loads ProductCategory table on the grid view.
+            //Loads Category table on the grid view.
             LoadGridView();
         }
 
