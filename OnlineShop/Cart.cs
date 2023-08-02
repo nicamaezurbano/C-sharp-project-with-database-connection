@@ -54,6 +54,8 @@ namespace OnlineShop
                 //Also, enables the remove & checkout button.
                 btn_remove_item.Enabled = true;
                 btn_checkout.Enabled = true;
+                btn_remove_item.BackColor = System.Drawing.Color.PeachPuff;
+                btn_checkout.BackColor = System.Drawing.Color.PeachPuff;
             }
             else
             {
@@ -63,6 +65,8 @@ namespace OnlineShop
                 //Also, remove & checkout button is disabled.
                 btn_checkout.Enabled = false;
                 btn_remove_item.Enabled = false;
+                btn_remove_item.BackColor = System.Drawing.Color.Snow;
+                btn_checkout.BackColor = System.Drawing.Color.Snow;
 
             }
 
@@ -119,6 +123,7 @@ namespace OnlineShop
             lbl_price.Text = dgv_list.SelectedRows[0].Cells[5].Value.ToString();
             num_quantity.Value = decimal.Parse(dgv_list.SelectedRows[0].Cells[6].Value.ToString());
             quantity = num_quantity.Value;
+            num_quantity.Enabled = true;
             price = lbl_price.Text;
         }
 
@@ -185,29 +190,38 @@ namespace OnlineShop
         private void btn_remove_item_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(con);
-            string queryDelete = "DELETE FROM Cart WHERE UserID=" + userID + " AND ItemID=" + itemID + "";
+            string queryUpdate = "DELETE FROM Cart WHERE ItemID=" + itemID + " AND UserID='" + userID + "'";
+
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand(queryDelete, conn);
-            
+            MySqlCommand cmd = new MySqlCommand(queryUpdate, conn);
+
             try
             {
                 cmd.ExecuteNonQuery();
             }
             catch
             {
-                MessageBox.Show("Removing item is not successful.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Deleting item is not successfull.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             conn.Close();
             LoadGridView(); //To update the contents of the grid view.
+
+            lbl_item.Text = "";
+            lbl_category.Text = "";
+            lbl_price.Text = "";
+            lbl_size.Text = "";
+            lbl_color.Text = "";
+            num_quantity.Value = 1;
+            num_quantity.Enabled = false;
         }
 
         private void btn_checkout_Click(object sender, EventArgs e)
         {
-            //Displays the form to view the item summary to place the order.
             Checkout checkout = new Checkout();
             this.Hide();
             checkout.Show();
+            checkout.lbl_total.Text = grandTotal.ToString();
         }
     }
 }
