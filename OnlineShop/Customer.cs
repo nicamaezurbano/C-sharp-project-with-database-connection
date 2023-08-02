@@ -97,6 +97,13 @@ namespace OnlineShop
             cart.Show();
         }
 
+        private void lbl_wishlist_Click(object sender, EventArgs e)
+        {
+            Wishlist wishlist = new Wishlist();
+            this.Hide();
+            wishlist.Show();
+        }
+
         private void Customer_Load(object sender, EventArgs e)
         {
             //Loads Item table on the grid view.

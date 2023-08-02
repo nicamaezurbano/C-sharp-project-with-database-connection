@@ -300,6 +300,7 @@ namespace OnlineShop
             this.lbl_wishlist.Size = new System.Drawing.Size(60, 18);
             this.lbl_wishlist.TabIndex = 10;
             this.lbl_wishlist.Text = "Wishlist";
+            this.lbl_wishlist.Click += new System.EventHandler(this.lbl_wishlist_Click);
             // 
             // lbl_cart
             // 

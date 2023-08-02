@@ -31,7 +31,7 @@ namespace OnlineShop
         {
             MySqlConnection conn = new MySqlConnection(con);
 
-            string cmd = "SELECT Cart.ItemID AS 'Item ID', Item.Name, Category.Name AS 'Category', Size, Color, SellingPrice AS Price, Quantity, Subtotal" +
+            string cmd = "SELECT Cart.ItemID AS 'Item ID', Item.Name AS Item, Category.Name AS 'Category', Size, Color, SellingPrice AS Price, Quantity, Subtotal" +
                 " FROM Cart, Item, Category" +
                 " WHERE Cart.ItemID=Item.Id AND Item.CategoryId =Category.Id AND UserID=" + userID + "";
 
@@ -141,6 +141,13 @@ namespace OnlineShop
             customer.Show();
         }
 
+        private void lbl_wishlist_Click(object sender, EventArgs e)
+        {
+            Wishlist wishlist = new Wishlist();
+            this.Hide();
+            wishlist.Show();
+        }
+
         private void num_quantity_ValueChanged(object sender, EventArgs e)
         {
             quantity = num_quantity.Value;
@@ -190,10 +197,10 @@ namespace OnlineShop
         private void btn_remove_item_Click(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection(con);
-            string queryUpdate = "DELETE FROM Cart WHERE ItemID=" + itemID + " AND UserID='" + userID + "'";
+            string queryDelete = "DELETE FROM Cart WHERE ItemID=" + itemID + " AND UserID='" + userID + "'";
 
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand(queryUpdate, conn);
+            MySqlCommand cmd = new MySqlCommand(queryDelete, conn);
 
             try
             {

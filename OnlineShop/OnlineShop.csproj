@@ -106,6 +106,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wishlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wishlist.Designer.cs">
+      <DependentUpon>Wishlist.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +148,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wishlist.resx">
+      <DependentUpon>Wishlist.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
