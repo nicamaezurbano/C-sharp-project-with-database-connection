@@ -23,6 +23,7 @@ namespace OnlineShop
         {
             InitializeComponent();
         }
+
         private void LoadGridView()
         {
             MySqlConnection conn = new MySqlConnection(con);
@@ -87,6 +88,13 @@ namespace OnlineShop
             Login login = new Login();
             this.Hide();
             login.Show();
+        }
+
+        private void lbl_cart_Click(object sender, EventArgs e)
+        {
+            Cart cart = new Cart();
+            this.Hide();
+            cart.Show();
         }
 
         private void Customer_Load(object sender, EventArgs e)
