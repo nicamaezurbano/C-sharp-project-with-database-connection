@@ -40,6 +40,30 @@ namespace OnlineShop
             dgv_list.DataSource = ds.Tables["Wishlist"].DefaultView;
         }
 
+        private bool check_ItemID_ifexists(string userID, string itemID, string table)
+        {
+            MySqlConnection conn = new MySqlConnection(con);
+            DataSet ds = new DataSet();
+            int row = 0;
+
+            //Getting the no. rows from the particular table.
+            string selectQuery = "SELECT * FROM " + table + " WHERE UserID=" + userID + " AND ItemID=" + itemID + "";
+            MySqlDataAdapter da = new MySqlDataAdapter(selectQuery, conn);
+            da.Fill(ds, "SelectedTable");
+            row = ds.Tables["SelectedTable"].Rows.Count;
+
+            //If there is no record, returns false.
+            if (row <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
         private void clear()
         {
             lbl_item.Text = "";
@@ -61,6 +85,13 @@ namespace OnlineShop
             Cart cart = new Cart();
             this.Hide();
             cart.Show();
+        }
+
+        private void lbl_orders_Click(object sender, EventArgs e)
+        {
+            PlacedOrder placedorder = new PlacedOrder();
+            this.Hide();
+            placedorder.Show();
         }
 
         private void lbl_home_Click(object sender, EventArgs e)
@@ -87,6 +118,20 @@ namespace OnlineShop
             lbl_color.Text = dgv_list.SelectedRows[0].Cells[4].Value.ToString();
             lbl_price.Text = dgv_list.SelectedRows[0].Cells[5].Value.ToString();
 
+            //Disable button if the item already added to cart.
+            bool itemID_exists_on_cart = check_ItemID_ifexists(userID, itemID, "Cart");
+            if (itemID_exists_on_cart == true)
+            {
+                btn_add_cart.Text = "Already added";
+                btn_add_cart.Enabled = false;
+                btn_add_cart.BackColor = System.Drawing.Color.Snow;
+            }
+            else
+            {
+                btn_add_cart.Text = "Add to cart";
+                btn_add_cart.Enabled = true;
+                btn_add_cart.BackColor = System.Drawing.Color.PeachPuff;
+            }
         }
 
         private void btn_remove_item_Click(object sender, EventArgs e)

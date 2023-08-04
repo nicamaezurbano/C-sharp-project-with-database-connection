@@ -148,6 +148,13 @@ namespace OnlineShop
             wishlist.Show();
         }
 
+        private void lbl_orders_Click(object sender, EventArgs e)
+        {
+            PlacedOrder placedorder = new PlacedOrder();
+            this.Hide();
+            placedorder.Show();
+        }
+
         private void num_quantity_ValueChanged(object sender, EventArgs e)
         {
             quantity = num_quantity.Value;

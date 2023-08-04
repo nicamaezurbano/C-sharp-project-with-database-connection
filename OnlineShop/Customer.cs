@@ -104,6 +104,13 @@ namespace OnlineShop
             wishlist.Show();
         }
 
+        private void lbl_orders_Click(object sender, EventArgs e)
+        {
+            PlacedOrder placedorder = new PlacedOrder();
+            this.Hide();
+            placedorder.Show();
+        }
+
         private void Customer_Load(object sender, EventArgs e)
         {
             //Loads Item table on the grid view.
@@ -122,7 +129,7 @@ namespace OnlineShop
             itemID = dgv_list.SelectedRows[0].Cells[0].Value.ToString();
             price = dgv_list.SelectedRows[0].Cells[3].Value.ToString();
 
-            //Disable button if the item already added to cart.
+            //Disable button if the item already saved to wishist.
             bool itemID_exists_on_wishlist = check_ItemID_ifexists(userID, itemID, "Wishlist");
             if (itemID_exists_on_wishlist == true)
             {

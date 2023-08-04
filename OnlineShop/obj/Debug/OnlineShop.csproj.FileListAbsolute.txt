@@ -29,3 +29,4 @@ D:\Nica\PORTOLIO\ITP 106 L - Advanced Database\C-sharp-project-with-database-con
 D:\Nica\PORTOLIO\ITP 106 L - Advanced Database\C-sharp-project-with-database-connection\OnlineShop\obj\Debug\OnlineShop.Cart.resources
 D:\Nica\PORTOLIO\ITP 106 L - Advanced Database\C-sharp-project-with-database-connection\OnlineShop\obj\Debug\OnlineShop.Checkout.resources
 D:\Nica\PORTOLIO\ITP 106 L - Advanced Database\C-sharp-project-with-database-connection\OnlineShop\obj\Debug\OnlineShop.Wishlist.resources
+D:\Nica\PORTOLIO\ITP 106 L - Advanced Database\C-sharp-project-with-database-connection\OnlineShop\obj\Debug\OnlineShop.PlacedOrder.resources

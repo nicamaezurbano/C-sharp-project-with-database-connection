@@ -288,6 +288,7 @@ namespace OnlineShop
             this.lbl_orders.Size = new System.Drawing.Size(78, 18);
             this.lbl_orders.TabIndex = 11;
             this.lbl_orders.Text = "My Orders";
+            this.lbl_orders.Click += new System.EventHandler(this.lbl_orders_Click);
             // 
             // lbl_wishlist
             // 
