@@ -11,3 +11,9 @@ A project using C# windows form application with MySQL database connection.
 1. Import sql file (onlineshop.sql)
 2. Open OnlineShop.sln with Visual Studio 2019
 3. Run the project
+
+-------------------------------------------
+
+**More about the project:**
+
+ERD: [dbdiagram.io](https://dbdiagram.io/d/64cf922702bd1c4a5e5091d1)
