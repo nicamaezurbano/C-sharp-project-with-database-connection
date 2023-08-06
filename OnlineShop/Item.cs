@@ -169,7 +169,7 @@ namespace OnlineShop
                     }
                     catch(Exception err)
                     {
-                        MessageBox.Show("Item is not updated successfully: "+ queryUpdate, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Item is not updated successfully: "+ err, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

@@ -134,7 +134,7 @@ namespace OnlineShop
             this.txtBox_pass.Name = "txtBox_pass";
             this.txtBox_pass.Size = new System.Drawing.Size(266, 26);
             this.txtBox_pass.TabIndex = 3;
-            this.txtBox_pass.Text = "juan123";
+            this.txtBox_pass.Text = "admin123";
             this.txtBox_pass.TextChanged += new System.EventHandler(this.txtBox_pass_TextChanged);
             // 
             // txtBox_email
@@ -145,7 +145,7 @@ namespace OnlineShop
             this.txtBox_email.Name = "txtBox_email";
             this.txtBox_email.Size = new System.Drawing.Size(266, 26);
             this.txtBox_email.TabIndex = 2;
-            this.txtBox_email.Text = "juan@gmail.com";
+            this.txtBox_email.Text = "admin@gmail.com";
             // 
             // label3
             // 

@@ -158,6 +158,7 @@ namespace OnlineShop
             this.pnl_report.Name = "pnl_report";
             this.pnl_report.Size = new System.Drawing.Size(300, 154);
             this.pnl_report.TabIndex = 10;
+            this.pnl_report.Click += new System.EventHandler(this.pnl_report_Click);
             // 
             // lbl_report1
             // 
@@ -170,6 +171,7 @@ namespace OnlineShop
             this.lbl_report1.Size = new System.Drawing.Size(48, 21);
             this.lbl_report1.TabIndex = 12;
             this.lbl_report1.Text = "View";
+            this.lbl_report1.Click += new System.EventHandler(this.lbl_report1_Click);
             // 
             // lbl_report2
             // 
@@ -182,6 +184,7 @@ namespace OnlineShop
             this.lbl_report2.Size = new System.Drawing.Size(117, 38);
             this.lbl_report2.TabIndex = 11;
             this.lbl_report2.Text = "Report";
+            this.lbl_report2.Click += new System.EventHandler(this.lbl_report2_Click);
             // 
             // pnl_order
             // 
@@ -205,6 +208,7 @@ namespace OnlineShop
             this.lbl_order1.Size = new System.Drawing.Size(78, 21);
             this.lbl_order1.TabIndex = 12;
             this.lbl_order1.Text = "Manage";
+            this.lbl_order1.Click += new System.EventHandler(this.lbl_order1_Click);
             // 
             // lbl_order2
             // 
@@ -217,6 +221,7 @@ namespace OnlineShop
             this.lbl_order2.Size = new System.Drawing.Size(105, 38);
             this.lbl_order2.TabIndex = 11;
             this.lbl_order2.Text = "Order";
+            this.lbl_order2.Click += new System.EventHandler(this.lbl_order2_Click);
             // 
             // pnl_item
             // 

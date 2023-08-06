@@ -72,5 +72,37 @@ namespace OnlineShop
             this.Hide();
             order.Show();
         }
+
+        private void lbl_order1_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            this.Hide();
+            order.Show();
+        }
+
+        private void lbl_order2_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            this.Hide();
+            order.Show();
+        }
+
+        private void pnl_report_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+        }
+
+        private void lbl_report1_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+        }
+
+        private void lbl_report2_Click(object sender, EventArgs e)
+        {
+            Report report = new Report();
+            report.Show();
+        }
     }
 }
